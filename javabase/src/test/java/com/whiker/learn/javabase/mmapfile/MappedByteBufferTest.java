@@ -33,9 +33,11 @@ public class MappedByteBufferTest {
         log.info("readOnly flip. {}", read);
         byte[] bytes = new byte[read.limit()];
         read.get(bytes);
+        log.info("readOnly after get. {}", read);
         log.info("read check: {}", data.equals(new String(bytes, Util.UTF8)));
 
         //= 保存的文件大小是reverseFileSize
+        fileChannel.force(false);
         fileChannel.close();
     }
 }
