@@ -36,7 +36,9 @@ public class MappedByteBufferTest {
         log.info("readOnly after get. {}", read);
         log.info("read check: {}", data.equals(new String(bytes, Util.UTF8)));
 
-        //= 保存的文件大小是reverseFileSize
+        // 保存的文件大小是reverseFileSize
+        // https://docs.oracle.com/javase/7/docs/api/java/nio/channels/FileChannel.html#force(boolean)
+        // FileChannel的force()不完全包括MappedByteBuffer的修改
         fileChannel.force(false);
         fileChannel.close();
     }
