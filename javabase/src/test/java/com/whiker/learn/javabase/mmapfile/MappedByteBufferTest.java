@@ -35,6 +35,7 @@ public class MappedByteBufferTest {
         read.get(bytes);
         log.info("read check: {}", data.equals(new String(bytes, Util.UTF8)));
 
+        //= 保存的文件大小是reverseFileSize
         fileChannel.close();
     }
 }
