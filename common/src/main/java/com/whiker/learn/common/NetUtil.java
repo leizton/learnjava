@@ -12,19 +12,22 @@ import java.util.Optional;
  */
 public class NetUtil {
 
-    public static Optional<String> localIp() throws SocketException {
-        NetworkInterface ni;
-        InetAddress inet;
-        Enumeration<NetworkInterface> nis = NetworkInterface.getNetworkInterfaces();
+    public static Optional<String> localIp() {
+        try {
+            NetworkInterface ni;
+            InetAddress inet;
+            Enumeration<NetworkInterface> nis = NetworkInterface.getNetworkInterfaces();
 
-        while (nis.hasMoreElements() && (ni = nis.nextElement()) != null) {
-            Enumeration<InetAddress> inets = ni.getInetAddresses();
-
-            while (inets.hasMoreElements() && (inet = inets.nextElement()) != null) {
-                if (inet instanceof Inet4Address && !inet.isLoopbackAddress()) {
-                    return Optional.of(inet.getHostAddress());
+            while (nis.hasMoreElements() && (ni = nis.nextElement()) != null) {
+                Enumeration<InetAddress> inets = ni.getInetAddresses();
+                while (inets.hasMoreElements() && (inet = inets.nextElement()) != null) {
+                    if (inet instanceof Inet4Address && !inet.isLoopbackAddress()) {
+                        return Optional.of(inet.getHostAddress());
+                    }
                 }
             }
+        } catch (SocketException e) {
+            // ignore
         }
         return Optional.empty();
     }

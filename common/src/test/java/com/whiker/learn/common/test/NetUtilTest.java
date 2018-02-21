@@ -9,7 +9,7 @@ import org.junit.Test;
 public class NetUtilTest {
 
     @Test
-    public void test() throws Exception {
+    public void test() {
         System.out.println(NetUtil.localIp());
     }
 }

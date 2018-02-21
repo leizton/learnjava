@@ -1,6 +1,6 @@
 package com.whiker.learn.javabase.mmapfile;
 
-import com.whiker.learn.javabase.Util;
+import com.whiker.learn.common.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

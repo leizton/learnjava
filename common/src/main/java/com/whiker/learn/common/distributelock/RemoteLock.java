@@ -7,7 +7,6 @@ import sun.misc.Unsafe;
 
 import java.lang.management.ManagementFactory;
 import java.lang.reflect.Field;
-import java.net.SocketException;
 import java.util.Iterator;
 import java.util.Optional;
 import java.util.concurrent.CountDownLatch;
@@ -38,15 +37,12 @@ public class RemoteLock {
 
     static {
         String ipAddress;
-        try {
-            Optional<String> opt = NetUtil.localIp();
-            if (!opt.isPresent() || Strings.isNullOrEmpty(opt.get())) {
-                throw new RuntimeException("get local ipAddress fail.");
-            }
-            ipAddress = opt.get();
-        } catch (SocketException e) {
-            throw new RuntimeException(e);
+
+        Optional<String> opt = NetUtil.localIp();
+        if (!opt.isPresent() || Strings.isNullOrEmpty(opt.get())) {
+            throw new RuntimeException("get local ipAddress fail.");
         }
+        ipAddress = opt.get();
 
         String processFlag = ManagementFactory.getRuntimeMXBean().getName();
         if (Strings.isNullOrEmpty(processFlag)) {

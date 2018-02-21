@@ -20,6 +20,7 @@
         <module>lnetty</module>
         <module>kvstore</module>
         <module>lkafka</module>
+        <module>use-zk</module>
     </modules>
 
     <properties>
@@ -29,6 +30,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- project common -->
+            <dependency>
+                <groupId>com.whiker.learn</groupId>
+                <artifactId>common</artifactId>
+                <version>1.0</version>
+            </dependency>
+
             <!-- spring -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -74,6 +82,13 @@
                 <groupId>org.apache.kafka</groupId>
                 <artifactId>kafka_2.11</artifactId>
                 <version>0.10.2.1</version>
+            </dependency>
+
+            <!-- zookeeper -->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>3.4.10</version>
             </dependency>
 
             <!-- json -->
@@ -128,22 +143,22 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>1.6.2</version>
+                <version>1.7.25</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
-                <version>1.6.2</version>
+                <version>1.7.25</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-core</artifactId>
-                <version>0.9.29</version>
+                <version>1.2.3</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>0.9.29</version>
+                <version>1.2.3</version>
             </dependency>
 
             <!-- 单元测试 -->
