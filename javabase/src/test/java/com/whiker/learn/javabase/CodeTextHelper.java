@@ -1,7 +1,7 @@
 package com.whiker.learn.javabase;
 
 /**
- * @author yiqun.fan create on 17-12-15.
+ * @author leizton create on 17-12-15.
  */
 public class CodeTextHelper {
 

@@ -3,7 +3,7 @@ package com.whiker.learn.common.thread;
 import java.util.concurrent.*;
 
 /**
- * @author yiqun.fan@qunar.com create on 16-6-11.
+ * @author leizton create on 16-6-11.
  *         串行互斥执行器
  */
 public class SerialMutexExecutor {

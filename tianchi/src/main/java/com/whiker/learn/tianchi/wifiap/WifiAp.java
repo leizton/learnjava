@@ -1,7 +1,7 @@
 package com.whiker.learn.tianchi.wifiap;
 
 /**
- * @author yiqun.fan@qunar.com create on 16-10-19.
+ * @author leizton create on 16-10-19.
  */
 public class WifiAp {
 

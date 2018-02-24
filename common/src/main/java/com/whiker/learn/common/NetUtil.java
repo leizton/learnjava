@@ -8,7 +8,7 @@ import java.util.Enumeration;
 import java.util.Optional;
 
 /**
- * @author yiqun.fan create on 17-3-9.
+ * @author leizton create on 17-3-9.
  */
 public class NetUtil {
 

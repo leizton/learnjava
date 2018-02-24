@@ -1,7 +1,7 @@
 package com.whiker.learn.common;
 
 /**
- * @author yiqun.fan create on 17-12-22.
+ * @author leizton create on 17-12-22.
  */
 public class TestUtil {
 

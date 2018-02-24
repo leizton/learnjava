@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.lang.management.ManagementFactory;
 
 /**
- * @author yiqun.fan create on 17-3-15.
+ * @author leizton create on 17-3-15.
  */
 public class RuntimeExecTest {
 

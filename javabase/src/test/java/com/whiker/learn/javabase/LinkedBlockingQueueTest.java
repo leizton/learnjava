@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * @author yiqun.fan create on 17-12-22.
+ * @author leizton create on 17-12-22.
  */
 public class LinkedBlockingQueueTest {
 

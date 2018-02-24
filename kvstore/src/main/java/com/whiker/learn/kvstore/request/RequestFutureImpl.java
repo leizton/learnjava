@@ -7,7 +7,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @author yiqun.fan create on 17-3-29.
+ * @author leizton create on 17-3-29.
  */
 public class RequestFutureImpl<T> implements RequestFuture {
     private static final byte UNRECEIVED = 0;
