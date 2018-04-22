@@ -10,16 +10,11 @@
     <version>1.0</version>
     <modules>
         <module>common</module>
-        <module>use-mysql</module>
         <module>use-spring</module>
         <module>use-guava</module>
-        <module>use-easymock</module>
         <module>javabase</module>
         <module>tianchi</module>
-        <module>elasticscript</module>
-        <module>lnetty</module>
         <module>kvstore</module>
-        <module>lkafka</module>
         <module>use-zk</module>
     </modules>
 
@@ -84,36 +79,19 @@
                 <version>0.10.2.1</version>
             </dependency>
 
-            <!-- zookeeper -->
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>3.4.10</version>
             </dependency>
 
-            <!-- json -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>1.2.8</version>
-            </dependency>
-
-            <!-- elastic -->
-            <dependency>
-                <groupId>org.elasticsearch</groupId>
-                <artifactId>elasticsearch</artifactId>
-                <version>5.0.1</version>
-            </dependency>
-
-            <!-- jedis -->
-            <!-- https://github.com/xetorthio/client -->
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>2.9.0</version>
             </dependency>
 
-            <!-- 数据库 -->
+            <!-- db -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -167,13 +145,6 @@
                 <artifactId>junit</artifactId>
                 <version>4.12</version>
                 <scope>test</scope>
-            </dependency>
-
-            <!-- EasyMock -->
-            <dependency>
-                <groupId>org.easymock</groupId>
-                <artifactId>easymock</artifactId>
-                <version>${easymock.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
