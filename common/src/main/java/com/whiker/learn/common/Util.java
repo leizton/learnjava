@@ -18,8 +18,7 @@ public class Util {
             try {
                 latch.await();
                 break;
-            } catch (InterruptedException e) {
-                // ignore
+            } catch (InterruptedException ignore) {
             }
         }
     }

@@ -144,7 +144,7 @@ public class RemoteLock {
         lockedNode = HeartBeatTask.add(client, remoteLockKey, nickName);
     }
 
-    public boolean tryLock() throws RemoteLockException {
+    public boolean tryLock() {
         long setnxRet = client.setnx(remoteLockKey, nickName);
         if (setnxRet != 1) {
             return false;
@@ -179,7 +179,7 @@ public class RemoteLock {
                     return true;
                 }
             }
-        } catch (InterruptedException e) {
+        } catch (InterruptedException ignore) {
             // while node.latch.await(), the thread is interrupted
         }
         node.dead();
